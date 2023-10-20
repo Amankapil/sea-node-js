@@ -20,13 +20,28 @@ app.use(bodyParser.json());
 app.use(webroute);
 
 
-export const db = mysql.createConnection({
+// export const db = mysql.createConnection({
+//   host: "217.21.87.205",
+//   user: "u947451844_sea",
+//   password: "s8oP4O?!=Q",
+//   database: "u947451844_seaBackend",
+// });
+// db.connect((err) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log("Database Connected");
+//   }
+// });
+
+
+const db = mysql.createPool({
   host: "217.21.87.205",
   user: "u947451844_sea",
   password: "s8oP4O?!=Q",
   database: "u947451844_seaBackend",
 });
-db.connect((err) => {
+db.getConnection((err) => {
   if (err) {
     console.log(err);
   } else {
