@@ -35,7 +35,7 @@ app.use(webroute);
 // });
 
 
-const db = mysql.createPool({
+export const db = mysql.createPool({
   host: "217.21.87.205",
   user: "u947451844_sea",
   password: "s8oP4O?!=Q",
